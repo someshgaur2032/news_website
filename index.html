@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zee News Template</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        .dark-mode body {
+            background-color: #333;
+            color: #fff;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200px;
+            z-index: 1000;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+        nav a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .dark-mode section {
+            background-color: #333;
+            color: #fff;
+            border-color: #fff;
+        }
+        .web-story {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        .article {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .menu-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .dark-mode-btn {
+            position: fixed;
+            top: 50px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zee News</h1>
+    </header>
+    <nav id="slide-menu">
+        <a href="#">Home</a>
+        <a href="#">World</a>
+        <a href="#">Politics</a>
+        <a href="#">Business</a>
+        <a href="#">Entertainment</a>
+    </nav>
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
+    <section>
+        <div class="web-story">
+            <h2>Featured Web Stories</h2>
+            <div class="web-story-item">
+                <h3>Story Title 1</h3>
+                <p>This is a web story summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="web-story-item">
+                <h3>Story Title 2</h3>
+                <p>This is another web story summary. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="article">
+            <h2>Latest Articles</h2>
+            <div class="article-item">
+                <h3>Article Title 1</h3>
+                <p>This is a dummy article. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="article-item">
+                <h3>Article Title 2</h3>
+                <p>This is another dummy article. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Zee News</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("slide-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
